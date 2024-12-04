@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link } from "react-router-dom";
+
 const MyNavbar = () => {
   return (
     <Navbar expand="lg" bg="dark" variant="dark" style={{ backgroundColor: "#221f1f" }}>
@@ -13,9 +15,9 @@ const MyNavbar = () => {
         <Navbar.Collapse id="navbarNav">
           <Nav className="me-auto mb-2 mb-lg-0">
             <Nav.Item>
-              <Nav.Link href="#" className="fw-bold">
+              <Link to="/" className="fw-bold nav-link">
                 Home
-              </Nav.Link>
+              </Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#" className="fw-bold">
@@ -37,11 +39,13 @@ const MyNavbar = () => {
                 My List
               </Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+              <Link to="/Griffin" className="nav-link fw-bold">
+                TV Show's
+              </Link>
+            </Nav.Item>
           </Nav>
           <div className="d-flex align-items-center">
-            <div></div>
-            <div></div>
-            <div></div>
             <div id="kids" className="fw-bold" style={{ marginRight: "1rem" }}>
               KIDS
             </div>

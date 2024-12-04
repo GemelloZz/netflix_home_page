@@ -2,7 +2,7 @@ import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Spinner } from "react-bootstrap";
 
-class MovieStar extends Component {
+class Griffin extends Component {
   state = {
     arrayFilms: [],
     isLoading: true,
@@ -10,7 +10,7 @@ class MovieStar extends Component {
   };
 
   getFilms = () => {
-    fetch("http://www.omdbapi.com/?i=tt3896198&apikey=bfb62e62&s=StarWars")
+    fetch("http://www.omdbapi.com/?i=tt3896198&apikey=bfb62e62&s=griffin")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -57,4 +57,4 @@ class MovieStar extends Component {
   }
 }
 
-export default MovieStar;
+export default Griffin;
